@@ -4,8 +4,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 
+html{
+	height: 100%;
+}
 body {
   padding-top: 54px;
+  height: 100%;
 }
 
 .navbar-brand{
@@ -18,4 +22,24 @@ body {
   body {
     padding-top: 56px;
   }
+}
+
+
+/*
+Custom Styling
+*/
+
+.wrapper{
+	min-height: 100%;
+	position: relative;
+}
+.content{
+	padding-top:30px;
+	padding-bottom: 60px;
+}
+.footer{
+	width:100%;
+	position: absolute;
+	bottom: 0;
+	height: 60px;
 }

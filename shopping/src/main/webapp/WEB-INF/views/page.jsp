@@ -22,6 +22,10 @@
 
 <title>Shopping - ${title}</title>
 
+<script type="text/javascript">
+	window.menu = '${title}';
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet"
@@ -30,30 +34,39 @@
 	crossorigin="anonymous">
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
-
+<link href="${css}/material-dashboard.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
 
-	<!-- Page Content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
+	<div class="wrapper">
 
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
+		<div class="content">
 
+			<!-- Page Content -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
+
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
+
+		</div>
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+	</div>
+
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -69,7 +82,9 @@
 		crossorigin="anonymous"></script>
 	<script src="${js}/jquery.min.js"></script>
 	<script src="${js}/bootstrap.min.js"></script>
-
+	<script src="${js}/myapp.js"></script>
+	<script src="${js}/material-dashboard.js"></script>
+	<script src="${js}/material.min.js"></script>
 </body>
 
 </html>
