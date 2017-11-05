@@ -8,6 +8,12 @@ body {
   padding-top: 54px;
 }
 
+.navbar-brand{
+	font-size: 3em;
+}
+.nav-item{
+	font-size: 1.6em;
+}
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
