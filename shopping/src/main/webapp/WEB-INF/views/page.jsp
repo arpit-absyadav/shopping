@@ -25,6 +25,11 @@
 <script type="text/javascript">
 	window.menu = '${title}';
 </script>
+<style type="text/css">
+a:active {
+	color: yellow;
+}
+</style>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +39,7 @@
 	crossorigin="anonymous">
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
-<link href="${css}/material-dashboard.css" rel="stylesheet">
+<link href="${css}/sketchey-theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -58,6 +63,9 @@
 
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
+			</c:if>
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 
 		</div>
@@ -83,8 +91,7 @@
 	<script src="${js}/jquery.min.js"></script>
 	<script src="${js}/bootstrap.min.js"></script>
 	<script src="${js}/myapp.js"></script>
-	<script src="${js}/material-dashboard.js"></script>
-	<script src="${js}/material.min.js"></script>
+
 </body>
 
 </html>
