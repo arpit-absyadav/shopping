@@ -40,3 +40,9 @@ Custom Styling
 	bottom: 0;
 	height: 60px;
 }
+
+
+//active link
+a:active {
+    color: blue;
+}
