@@ -8,23 +8,31 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
-
+	/*
+	 * @JsonIgnore is an annotation to ignore field in JSON(response)
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String code;
 	private String name;
 	private String brand;
+	@JsonIgnore
 	private String description;
 	@Column(name = "unit_price")
 	private double unitPrice;
 	private int quantity;
+	@JsonIgnore
 	@Column(name = "is_active")
 	private boolean active;
+	@JsonIgnore
 	@Column(name = "category_id")
 	private int categoryId;
+	@JsonIgnore
 	@Column(name = "supplier_id")
 	private int supplierId;
 	private int purchases;
@@ -106,7 +114,7 @@ public class Product {
 
 	public void setCategoryId(int categoryId) {
 		this.categoryId = categoryId;
-	}	
+	}
 
 	public int getSupplierId() {
 		return supplierId;
