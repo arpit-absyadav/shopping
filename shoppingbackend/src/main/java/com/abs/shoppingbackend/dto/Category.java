@@ -1,4 +1,4 @@
-package com.abs.shopingbackend.dto;
+package com.abs.shoppingbackend.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,6 +16,7 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
+	@Column(name="description")
 	private String description;
 	
 	@Column(name="image_url")
@@ -70,6 +71,7 @@ public class Category {
 		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
 				+ ", active=" + active + "]";
 	}
+
 
 	
 }

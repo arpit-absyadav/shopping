@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.abs.shopingbackend.dto.Category;
 import com.abs.shoppingbackend.dao.CategoryDAO;
+import com.abs.shoppingbackend.dto.Category;
 
 @Controller
 public class PageController {

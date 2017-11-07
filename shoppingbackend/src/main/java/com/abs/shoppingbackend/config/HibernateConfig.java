@@ -14,7 +14,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages = { "com.abs.shopingbackend.dto" })
+@ComponentScan(basePackages = { "com.abs.shoppingbackend.dto" })
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -47,6 +47,9 @@ public class HibernateConfig {
 
 		builder.addProperties(getHibernateProperties());
 		builder.scanPackages("com.abs.shoppingbackend.dto");
+
+		// if scanpackege failed to scan .. then this is the way
+		// builder.addAnnotatedClass(com.abs.shoppingbackend.dto.Category.class);
 		return builder.buildSessionFactory();
 	}
 
